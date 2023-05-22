@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (width >= 1024px) {
+  .form-container {
+    display: flex;
+    justify-content: center;
+  }
+}

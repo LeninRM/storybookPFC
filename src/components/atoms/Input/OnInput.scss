@@ -1,0 +1,93 @@
+:root {
+  --input-background-color: #f0f0f0;
+  --input__input-border-color: #c3c6cb;
+  --input__input-color: #000;
+  --input__input-background-color: #fff;
+  --input__label-color: #51545a;
+  --input__hint-color: #b0b2b6;
+  --input--disabled__input-background-color: #efeff5;
+  --input--disabled__input-color: #cacaca;
+  --input--focus__input-border-color: #51545a;
+  --input__color-danger: #f85e5b;
+  --input__input-border-width: 1px;
+  --input__input-border-radius: 6px;
+  --input__input-font-size: 13px;
+  --input__input-font-weight: normal;
+  --input__label-font-weight: normal;
+  --input__label-font-size: 12px;
+  --input__hint-font-size: 8px;
+  --input--error__hint-font-size: 10px;
+  --input__input-pointer-events: 0;
+  --input--disabled__input-pointer-events: none;
+}
+
+.input {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+
+  &__label {
+    color: var(--input__label-color);
+    font-size: var(--input__label-font-size);
+    font-weight: var(--input__label-font-weight);
+  }
+
+  &__input {
+    all: unset;
+    border: solid;
+    padding-left: 3px;
+    margin-top: 5px;
+    height: var(--input__input-height, 2em);
+    font-weight: var(--input__input-font-weight);
+    color: var(--input__input-color);
+    background-color: var(--input__input-background-color);
+    font-size: var(--input__input-font-size);
+    border-width: var(--input__input-border-width);
+    border-color: var(--input__input-border-color);
+    border-radius: var(--input__input-border-radius);
+    pointer-events: var(--input__input-pointer-events);
+  }
+
+  &__hint {
+    color: var(--input__hint-color);
+    font-size: var(--input__hint-font-size);
+  }
+
+  &--is-dark {
+    --input-background-color: #303030;
+    --input__input-border-width: 0 0 3px;
+    --input__input-border-radius: 0;
+    --input__input-font-size: 13px;
+    --input__input-font-weight: normal;
+    --input__label-font-size: 12px;
+    --input__label-font-weight: bold;
+    --input--error__hint-font-size: 10px;
+    --input__input-border-color: #c3c6cb;
+    --input__input-color: #fff;
+    --input__input-background-color: #51545a;
+    --input__label-color: #efeff5;
+    --input__hint-color: #b0b2b6;
+    --input--disabled__input-background-color: #a0a3a7;
+    --input--disabled__input-color: #51545a;
+    --input--focus__input-border-color: #00bcd4;
+    --input__color-danger: #f85e5b;
+  }
+
+  &--focus {
+    --input__input-border-color: var(--input--focus__input-border-color);
+  }
+
+  &--disabled {
+    --input__input-background-color: var(
+      --input--disabled__input-background-color
+    );
+    --input__input-color: var(--input--disabled__input-color);
+    --input__input-pointer-events: var(--input--disabled__input-pointer-events);
+  }
+
+  &--error {
+    --input__input-border-color: var(--input__color-danger);
+    --input__hint-color: var(--input__color-danger);
+  }
+}

@@ -1,0 +1,42 @@
+:root {
+  --button-color: #fff;
+  --button-background-color: #644ded;
+  --button-padding: 10px 20px;
+  --button-border: none;
+  --button-border-radius: 4px;
+  --button-font-size: 16px;
+  --button-font-weight: bold;
+}
+
+.button {
+  font-weight: var(--button-font-weight);
+  padding: var(--button-padding);
+  font-size: var(--button-font-size);
+  color: var(--button-color);
+  border: var(--button-border);
+  background-color: var(--button-background-color);
+  border-radius: var(--button-border-radius);
+
+  &--rounded {
+    --button-border-radius: 15px;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--is-dark {
+    --button-background-color: #bb86fc;
+  }
+
+  &--disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+
+    --button-background-color: rgb(173 172 172);
+  }
+}
+
+button + button {
+  margin-left: 10px;
+}
